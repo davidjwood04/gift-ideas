@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gift Ideas</title>
+<style>
+  :root {
+    --bg: #faf7f2;
+    --surface: #ffffff;
+    --text: #27221c;
+    --text-muted: #7a7266;
+    --accent: #c0432e;
+    --accent-soft: #f2d9c9;
+    --border: #e8e0d4;
+    --shadow: 0 1px 2px rgba(40, 30, 10, 0.06), 0 8px 24px rgba(40, 30, 10, 0.06);
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  header {
+    padding: 4rem 1.5rem 2.5rem;
+    text-align: center;
+  }
+
+  header .eyebrow {
+    display: inline-block;
+    font-size: 0.75rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--accent);
+    font-weight: 700;
+    margin-bottom: 0.9rem;
+  }
+
+  header h1 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(2.2rem, 5vw, 3.2rem);
+    margin: 0 0 0.6rem;
+    letter-spacing: -0.01em;
+  }
+
+  header p {
+    color: var(--text-muted);
+    font-size: 1.05rem;
+    margin: 0;
+  }
+
+  main {
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 0 1.5rem 5rem;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.18s ease, box-shadow 0.18s ease;
+  }
+
+  .card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 2px 4px rgba(40, 30, 10, 0.08), 0 16px 32px rgba(40, 30, 10, 0.12);
+  }
+
+  .card-media {
+    aspect-ratio: 1 / 1;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.1rem;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .card-media img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    mix-blend-mode: multiply;
+  }
+
+  .card-media.no-image {
+    color: var(--text-muted);
+    font-size: 0.85rem;
+    text-align: center;
+    padding: 2rem 1rem;
+    background: var(--accent-soft);
+  }
+
+  .card-body {
+    padding: 1rem 1.1rem 1.2rem;
+    flex: 1;
+    display: flex;
+  }
+
+  .card-body a {
+    color: var(--text);
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: 600;
+    line-height: 1.35;
+  }
+
+  .card-body a:hover {
+    color: var(--accent);
+    text-decoration: underline;
+    text-decoration-color: var(--accent-soft);
+    text-underline-offset: 3px;
+  }
+
+  footer {
+    text-align: center;
+    color: var(--text-muted);
+    font-size: 0.8rem;
+    padding: 2rem 1.5rem 3rem;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #1b1812;
+      --surface: #262219;
+      --text: #f1ece2;
+      --text-muted: #a69c8a;
+      --accent: #e8714f;
+      --accent-soft: #3a2a20;
+      --border: #3a3326;
+      --shadow: 0 1px 2px rgba(0,0,0,0.3), 0 8px 24px rgba(0,0,0,0.35);
+    }
+    .card-media { background: #f4f1ea; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <span class="eyebrow">Bookmarked November 5, 2026</span>
+  <h1>Gift Ideas</h1>
+  <p>A running list of gift ideas saved for the kids.</p>
+</header>
+
+<main>
+  <div class="grid">
+
+    <div class="card">
+      <div class="card-media"><img src="https://images-na.ssl-images-amazon.com/images/P/0310750628.01.LZZZZZZZ.jpg" alt="Lots of Knock-Knock Jokes for Kids" loading="lazy"></div>
+      <div class="card-body"><a href="https://www.amazon.com/Lots-Knock-Knock-Jokes-Kids-Whee/dp/0310750628" target="_blank" rel="noopener">Lots of Knock-Knock Jokes for Kids</a></div>
+    </div>
+
+    <div class="card">
+      <div class="card-media"><img src="https://m.media-amazon.com/images/I/615ja9Um-vL._AC_SL1254_.jpg" alt="STEM Science Kit Toy for Kids" loading="lazy"></div>
+      <div class="card-body"><a href="https://www.amazon.com/Science-Christmas-Birthday-Building-Electronic/dp/B0D4JV92R9" target="_blank" rel="noopener">STEM Science Kit Toy for Kids</a></div>
+    </div>
+
+    <div class="card">
+      <div class="card-media"><img src="https://images-na.ssl-images-amazon.com/images/P/0800788036.01.LZZZZZZZ.jpg" alt="Laugh-Out-Loud Jokes for Kids" loading="lazy"></div>
+      <div class="card-body"><a href="https://www.amazon.com/Laugh-Out-Loud-Jokes-Kids-Rob-Elliott/dp/0800788036" target="_blank" rel="noopener">Laugh-Out-Loud Jokes for Kids</a></div>
+    </div>
+
+    <div class="card">
+      <div class="card-media"><img src="https://images-na.ssl-images-amazon.com/images/P/0800788222.01.LZZZZZZZ.jpg" alt="Knock-Knock Jokes for Kids" loading="lazy"></div>
+      <div class="card-body"><a href="https://www.amazon.com/Knock-Knock-Jokes-Kids-Rob-Elliott/dp/0800788222" target="_blank" rel="noopener">Knock-Knock Jokes for Kids</a></div>
+    </div>
+
+    <div class="card">
+      <div class="card-media"><img src="https://images-na.ssl-images-amazon.com/images/P/B0BLJ4FDT4.01.LZZZZZZZ.jpg" alt="LEGO Creator 3-in-1 Space Shuttle" loading="lazy"></div>
+      <div class="card-body"><a href="https://www.amazon.com/LEGO-Astronaut-Spaceship-Building-Creative/dp/B0BLJ4FDT4" target="_blank" rel="noopener">LEGO Creator 3-in-1 Space Shuttle</a></div>
+    </div>
+
+    <div class="card">
+      <div class="card-media"><img src="https://images-na.ssl-images-amazon.com/images/P/B0FMS5JG7T.01.LZZZZZZZ.jpg" alt="LEGO City Hot Rod" loading="lazy"></div>
+      <div class="card-body"><a href="https://www.amazon.com/LEGO-City-Race-Building-Kids/dp/B0FMS5JG7T" target="_blank" rel="noopener">LEGO City Hot Rod</a></div>
+    </div>
+
+    <div class="card">
+      <div class="card-media"><img src="https://images-na.ssl-images-amazon.com/images/P/0593196791.01.LZZZZZZZ.jpg" alt="Would You Rather? Made You Think! Edition" loading="lazy"></div>
+      <div class="card-body"><a href="https://www.amazon.com/Would-You-Rather-Made-Think/dp/0593196791" target="_blank" rel="noopener">Would You Rather? Made You Think! Edition</a></div>
+    </div>
+
+    <div class="card">
+      <div class="card-media"><img src="https://images-na.ssl-images-amazon.com/images/P/059343546X.01.LZZZZZZZ.jpg" alt="Would You Rather? Family Challenge! Edition" loading="lazy"></div>
+      <div class="card-body"><a href="https://www.amazon.com/Would-You-Rather-Family-Challenge/dp/059343546X" target="_blank" rel="noopener">Would You Rather? Family Challenge! Edition</a></div>
+    </div>
+
+    <div class="card">
+      <div class="card-media"><img src="https://images-na.ssl-images-amazon.com/images/P/B0FMYW35D4.01.LZZZZZZZ.jpg" alt="LEGO Technic Yellow Motorcycle" loading="lazy"></div>
+      <div class="card-body"><a href="https://www.amazon.com/LEGO-Technic-Yellow-Motorcycle-Toy/dp/B0FMYW35D4" target="_blank" rel="noopener">LEGO Technic Yellow Motorcycle</a></div>
+    </div>
+
+    <div class="card">
+      <div class="card-media"><img src="https://images-na.ssl-images-amazon.com/images/P/B0DJ196YL1.01.LZZZZZZZ.jpg" alt="LEGO Technic Backhoe Loader" loading="lazy"></div>
+      <div class="card-body"><a href="https://www.amazon.com/LEGO-Technic-Backhoe-Loader-Construction/dp/B0DJ196YL1" target="_blank" rel="noopener">LEGO Technic Backhoe Loader</a></div>
+    </div>
+
+    <div class="card">
+      <div class="card-media"><img src="https://m.media-amazon.com/images/I/718JEmgfkML._AC_SL1500_.jpg" alt="30-Pack Mini Mochi Squishy Toys" loading="lazy"></div>
+      <div class="card-body"><a href="https://www.amazon.com/Squishy-Squishies-Birthday-Classroom-Treasure/dp/B0GBVG9JQV" target="_blank" rel="noopener">30-Pack Mini Mochi Squishy Toys</a></div>
+    </div>
+
+    <div class="card">
+      <div class="card-media"><img src="https://m.media-amazon.com/images/I/61fWPBct1nL._AC_SL1500_.jpg" alt="Bameca Magnetic Travel Chess Set" loading="lazy"></div>
+      <div class="card-body"><a href="https://www.amazon.com/Bameca-Magnetic-Full-Size-Camping-Strategy/dp/B0F99HR5HF" target="_blank" rel="noopener">Bameca Magnetic Travel Chess Set</a></div>
+    </div>
+
+    <div class="card">
+      <div class="card-media"><img src="https://images-na.ssl-images-amazon.com/images/P/B0DJ19R8H7.01.LZZZZZZZ.jpg" alt="LEGO Minecraft The Nether Lava Battle" loading="lazy"></div>
+      <div class="card-body"><a href="https://www.amazon.com/LEGO-Minecraft-Nether-Battle-Playset/dp/B0DJ19R8H7" target="_blank" rel="noopener">LEGO Minecraft The Nether Lava Battle</a></div>
+    </div>
+
+    <div class="card">
+      <div class="card-media no-image">No preview image available</div>
+      <div class="card-body"><a href="https://www.amazon.com/s?k=clearance+under+10+for+kids&page=2" target="_blank" rel="noopener">Amazon Search: Clearance Under $10 for Kids</a></div>
+    </div>
+
+    <div class="card">
+      <div class="card-media"><img src="https://images-na.ssl-images-amazon.com/images/P/B000ELSZW0.01.LZZZZZZZ.jpg" alt="Schylling Classic Tin Kaleidoscope" loading="lazy"></div>
+      <div class="card-body"><a href="https://www.amazon.com/Schylling-CTK-Classic-Tin-Kaleidoscope/dp/B000ELSZW0" target="_blank" rel="noopener">Schylling Classic Tin Kaleidoscope</a></div>
+    </div>
+
+    <div class="card">
+      <div class="card-media"><img src="https://m.media-amazon.com/images/I/71Pd6CMEOsL._AC_SL1500_.jpg" alt="VITTYL Mini Bowling Game Set" loading="lazy"></div>
+      <div class="card-body"><a href="https://www.amazon.com/VITTYL-Elephant-Relievers-Educational-Development/dp/B0BNJ3PP8V" target="_blank" rel="noopener">VITTYL Mini Bowling Game Set</a></div>
+    </div>
+
+    <div class="card">
+      <div class="card-media"><img src="https://images-na.ssl-images-amazon.com/images/P/B0DRW5NFHG.01.LZZZZZZZ.jpg" alt="LEGO City Police Motorcycle Chase" loading="lazy"></div>
+      <div class="card-body"><a href="https://www.amazon.com/LEGO-TBD-City-Police-60455/dp/B0DRW5NFHG" target="_blank" rel="noopener">LEGO City Police Motorcycle Chase</a></div>
+    </div>
+
+    <div class="card">
+      <div class="card-media"><img src="https://images-na.ssl-images-amazon.com/images/P/1915833957.01.LZZZZZZZ.jpg" alt="How to Draw for 6-8 Year Old Boys" loading="lazy"></div>
+      <div class="card-body"><a href="https://www.amazon.com/How-Draw-6-8-Year-Boys/dp/1915833957" target="_blank" rel="noopener">How to Draw for 6-8 Year Old Boys</a></div>
+    </div>
+
+    <div class="card">
+      <div class="card-media"><img src="https://images-na.ssl-images-amazon.com/images/P/0486468933.01.LZZZZZZZ.jpg" alt="How to Draw Animals (Dover)" loading="lazy"></div>
+      <div class="card-body"><a href="https://www.amazon.com/How-Draw-Animals-Dover/dp/0486468933" target="_blank" rel="noopener">How to Draw Animals (Dover)</a></div>
+    </div>
+
+    <div class="card">
+      <div class="card-media"><img src="https://m.media-amazon.com/images/I/71UUiv8mtML._AC_SL1500_.jpg" alt="Vilbocr Police Car Building Toy Set" loading="lazy"></div>
+      <div class="card-body"><a href="https://www.amazon.com/Vilbocr-Building-Stacking-Training-Cultivation/dp/B0DJVVKVFB" target="_blank" rel="noopener">Vilbocr Police Car Building Toy Set</a></div>
+    </div>
+
+    <div class="card">
+      <div class="card-media"><img src="https://images-na.ssl-images-amazon.com/images/P/B0BMSV6WVC.01.LZZZZZZZ.jpg" alt="Awesome Logic Games for Smart Kids" loading="lazy"></div>
+      <div class="card-body"><a href="https://www.amazon.com/Awesome-Logic-Games-Smart-Kids/dp/B0BMSV6WVC" target="_blank" rel="noopener">Awesome Logic Games for Smart Kids</a></div>
+    </div>
+
+    <div class="card">
+      <div class="card-media"><img src="https://m.media-amazon.com/images/I/71RkAD1yT+L._AC_SL1500_.jpg" alt="Yangmei Rainbow Colored Pencils Stocking Stuffer" loading="lazy"></div>
+      <div class="card-body"><a href="https://www.amazon.com/Yangmei-Supplies-Rainbow-Stocking-Stuffers/dp/B0DWSL3DV7" target="_blank" rel="noopener">Yangmei Rainbow Colored Pencils Stocking Stuffer</a></div>
+    </div>
+
+    <div class="card">
+      <div class="card-media"><img src="https://m.media-amazon.com/images/I/71RmdVaPTnL._AC_SL1000_.jpg" alt="NETEHU Magnetic Building Block Cubes" loading="lazy"></div>
+      <div class="card-body"><a href="https://www.amazon.com/NETEHU-Magnetic-Building-Construction-Resources/dp/B0DL5XQ2FQ" target="_blank" rel="noopener">NETEHU Magnetic Building Block Cubes</a></div>
+    </div>
+
+    <div class="card">
+      <div class="card-media"><img src="https://images-na.ssl-images-amazon.com/images/P/1999914740.01.LZZZZZZZ.jpg" alt="Awesome Jokes That Every 8 Year Old Should Know!" loading="lazy"></div>
+      <div class="card-body"><a href="https://www.amazon.com/Awesome-Jokes-That-Every-Should/dp/1999914740" target="_blank" rel="noopener">Awesome Jokes That Every 8 Year Old Should Know!</a></div>
+    </div>
+
+  </div>
+</main>
+
+<footer>
+  Generated from Amazon bookmarks saved on November 5, 2026.
+</footer>
+
+</body>
+</html>
